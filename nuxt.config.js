@@ -76,6 +76,14 @@ export default {
     }
   },
 
+  manifest: {
+    name: 'Valorant Store Checker Lite',
+    short_name: 'VSC-Lite',
+    description: 'Check your daily store without launching Valorant! Quick, easy, and simple!',
+    theme_color: '#FFFFFF',
+    background_color: '#FFFFFF'
+  },
+
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],

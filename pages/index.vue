@@ -175,6 +175,12 @@ export default {
     }
   },
 
+  head () {
+    return {
+      title: 'Home'
+    }
+  },
+
   computed: {
     toggle () {
       const icon = this.show ? 'mdi-eye' : 'mdi-eye-off'

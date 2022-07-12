@@ -28,7 +28,7 @@
             <v-card-actions>
               <v-btn
                 text
-                href="https://github.com/Lunac-dev/valorant-store-frontend"
+                href="https://github.com/Lunac-dev/valorant-store-checker-lite"
               >
                 Github
                 <v-icon>
