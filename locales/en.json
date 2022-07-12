@@ -1,0 +1,18 @@
+{
+  "alert": "Once retrieved, no new logins are allowed until the store is updated.",
+  "password": "We never share or store passwords.",
+  "plsfill": "Please fill out the form and make your selection.",
+  "authfailure": "Incorrect user name or password.",
+  "2fa": "It appears that two-factor authentication is enabled, so please enter the code from the 2FA tab to log in.",
+  "2faempty": "Two-factor authentication is not enabled or you are not logged in. Please go to the password tab and enter your user name and password before doing so.",
+  "ERR_BAD_REQUEST": "Your session has expired or is no longer available. Please log in again.",
+  "already": "Already acquired. You can check the Daily Store by going to the Store page.",
+  "storeyet": "Your login has not been completed. Please complete login from Home to get Daily Store.",
+  "about-subtitle": "This site is completely separate from the current VSC site. It is being developed with an emphasis on lighter weight and user performance.",
+  "faq-qsafe": "Q. Is this site secure?",
+  "faq-asafe": "A. I cannot say yes, but the source code for this site is all available on github. Also, use of this site is at your own risk.",
+  "faq-qmyregion": "Q. How can I check the region of my Riot account?",
+  "faq-amyregion": "A. Sign in to your account on the official Riot Games website to see your current region. The landing page will display all your personal information, including your Riot ID and tagline; go to the second section 'Personal Information' and check the 'Country/Region' text box under the email address you registered with. This is the region registered to your Riot account.",
+  "faq-qmyriotname": "Q. What is my Riot account username?",
+  "faq-amyriotname": "A. The username of your Riot account is the username you use to log in, like 'SuperJett', not the display name like 'SuperJett#saikyou'"
+}
