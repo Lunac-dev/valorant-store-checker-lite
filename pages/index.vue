@@ -226,7 +226,17 @@ export default {
           return
         }
         // Login and get store
-        const response = await this.$axios.get('http://localhost:3000/api/auth', { headers: { accname: this.riotusername, accpassword: this.riotuserpassword, accregion: this.riotregion } })
+        let response = null
+        try {
+          response = await this.$axios.get('http://localhost:3000/api/auth', { headers: { accname: this.riotusername, accpassword: this.riotuserpassword, accregion: this.riotregion } })
+        } catch (err) {
+          this.$swal({
+            icon: 'error',
+            title: 'Oops...',
+            text: err.message
+          })
+          return
+        }
         if (response.data.status !== 200 && response.data.status !== '2fa') {
           if (response.data.status === 'auth_failure') {
             this.$swal({
