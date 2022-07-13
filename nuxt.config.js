@@ -104,9 +104,11 @@ export default {
     }
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
+  publicRuntimeConfig: {
+    API_BASE: process.env.API_BASE
   },
 
-  serverMiddleware: ['~/api/']
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  build: {
+  }
 }
