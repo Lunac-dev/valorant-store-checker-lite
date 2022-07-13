@@ -7,7 +7,8 @@ export default {
     background: 'white'
   },
   loading: true,
-  ssr: false,
+  ssr: true,
+  target: "static",
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - Valorant Store Checker Lite',
@@ -77,7 +78,7 @@ export default {
     ],
     defaultLocale: 'en',
     langDir: 'locales/',
-    strategy: 'prefix_and_default',
+    strategy: 'no_prefix',
     lazy: true
   },
 

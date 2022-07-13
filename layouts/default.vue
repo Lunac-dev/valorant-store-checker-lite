@@ -51,13 +51,13 @@
         <v-list
           nav
         >
-          <v-list-item v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')">
+          <v-list-item v-if="$i18n.locale !== 'en'" @click="() => changeLocale('en')">
             <v-list-item-title>English</v-list-item-title>
           </v-list-item>
-          <v-list-item v-if="$i18n.locale !== 'ja'" :to="switchLocalePath('ja')">
+          <v-list-item v-if="$i18n.locale !== 'ja'" @click="() => changeLocale('ja')">
             <v-list-item-title>日本語</v-list-item-title>
           </v-list-item>
-          <v-list-item v-if="$i18n.locale !== 'de'" :to="switchLocalePath('de')">
+          <v-list-item v-if="$i18n.locale !== 'de'" @click="() => changeLocale('de')">
             <v-list-item-title>Deutsch</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -125,6 +125,13 @@ export default {
         ['mdi-cart', 'Daily Store', 'store', true]
       ],
       avatar: null
+    }
+  },
+
+  methods: {
+    changeLocale (locale) {
+      this.$i18n.setLocaleCookie(locale)
+      this.$router.go(0)
     }
   }
 }
