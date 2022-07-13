@@ -37,7 +37,8 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -50,6 +51,10 @@ export default {
     '@nuxtjs/i18n',
     'vue-sweetalert2/nuxt'
   ],
+
+  googleAnalytics: {
+    id: 'G-BVSRFJZE6M'
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
