@@ -29,6 +29,7 @@
               <v-btn
                 text
                 href="https://github.com/Lunac-dev/valorant-store-checker-lite"
+                target="_blank"
               >
                 Github
                 <v-icon>
@@ -48,6 +49,7 @@
               <v-btn
                 text
                 href="https://account.riotgames.com/"
+                target="_blank"
               >
                 Riot games Account
                 <v-icon>

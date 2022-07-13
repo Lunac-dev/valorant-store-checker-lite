@@ -25,10 +25,10 @@
         <v-list
           nav
         >
-          <v-list-item href="https://discord.gg/4zrQDW9PNq">
+          <v-list-item href="https://discord.gg/4zrQDW9PNq" target="_blank">
             <v-list-item-title>VSC Offical</v-list-item-title>
           </v-list-item>
-          <v-list-item href="https://discord.gg/valorant">
+          <v-list-item href="https://discord.gg/valorant" target="_blank">
             <v-list-item-title>Valorant Offical</v-list-item-title>
           </v-list-item>
         </v-list>
