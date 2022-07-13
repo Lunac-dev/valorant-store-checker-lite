@@ -84,7 +84,7 @@
           <v-list-item
             v-for="([icon, text, link, exact], i) in items"
             :key="`first-${i}`"
-            :to="localePath(link)"
+            :to="link"
             :exact="exact"
             color="valorant"
           >
@@ -119,7 +119,7 @@ export default {
     return {
       drawer: null,
       items: [
-        ['mdi-home-outline', 'Home', 'index', true],
+        ['mdi-home-outline', 'Home', '/', true],
         // ['mdi-trophy-variant-outline', 'VCT-Matches', 'vct-matches', true],
         ['mdi-information-outline', 'About / FAQ', 'about', true],
         ['mdi-cart', 'Daily Store', 'store', true]
