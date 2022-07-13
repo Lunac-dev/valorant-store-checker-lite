@@ -1,6 +1,14 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  loadingIndicator: {
+    name: 'circle',
+    color: '#fa4454',
+    background: 'white'
+  },
+  loading: true,
+  ssr: true,
+  target: "static",
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - Valorant Store Checker Lite',
