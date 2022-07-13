@@ -6,12 +6,12 @@ const Valorant = require('./auth/main');
 const rate = require('express-rate-limit');
 var authlimiter = rate({
     windowMs: 20*60*1000,
-    max: 10,
+    max: 5,
     standardHeaders: true,
     legacyHeaders: false,
     handler: function (_req, res, _next) {
         return res.status(200).json({
-            Status: 'You sent too many requests. Please wait a while then try again.'
+            status: 'You sent too many requests. Please wait a while then try again.'
         })
     },
     keyGenerator: (req, _res) => req.headers["cf-connecting-ip"]
@@ -39,7 +39,7 @@ async function getData() {
   console.log("Got data")
 }
 
-router.get('/auth', authlimiter, async (req, res, _next) => {
+router.get('/api/auth', authlimiter, async (req, res, _next) => {
   const accname = req.header("accname")
   const accpassword = req.header("accpassword")
   const accregion = req.header("accregion")
@@ -78,7 +78,7 @@ router.get('/auth', authlimiter, async (req, res, _next) => {
   }
 })
 
-router.get('/auth2fa', async (req, res, _next) => {
+router.get('/api/auth2fa', async (req, res, _next) => {
   const code = req.header("code")
   const asidcookie = req.header("asidcookie")
   const accregion = req.header("accregion")

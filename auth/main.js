@@ -1,4 +1,4 @@
 module.exports = {
-    API: require("./riotauth"),
+    API: require("./auth"),
     Regions: require("./regions"),
 };
