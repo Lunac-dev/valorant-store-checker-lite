@@ -228,7 +228,7 @@ export default {
         // Login and get store
         let response = null
         try {
-          response = await this.$axios.get(`${this.$config.API_BASE}/api/auth`, { headers: { accname: this.riotusername, accpassword: this.riotuserpassword, accregion: this.riotregion } })
+          response = await this.$axios.get('/api/auth', { headers: { accname: this.riotusername, accpassword: this.riotuserpassword, accregion: this.riotregion } })
         } catch (err) {
           this.$swal({
             icon: 'error',
@@ -314,7 +314,7 @@ export default {
           return
         }
         const tmp = JSON.parse(this.twofa)
-        const response = await this.$axios.get(`${this.$config.API_BASE}/api/auth2fa`, { headers: { asidcookie: tmp.asidcookie, code: this.code, accregion: tmp.accregion } })
+        const response = await this.$axios.get('/api/auth2fa', { headers: { asidcookie: tmp.asidcookie, code: this.code, accregion: tmp.accregion } })
         this.$cookies.remove('2fa')
         if (response.data.status !== 200 && response.data.status === 'ERR_BAD_REQUEST') {
           // invalid_session_id
