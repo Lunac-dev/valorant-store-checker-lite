@@ -1,7 +1,7 @@
 {
   "alert": "Nach dem Abrufen sind keine neuen Anmeldungen zulässig, bis der Store aktualisiert wurde.",
   "password": "Wir teilen oder speichern niemals Passwörter.",
-  "plsfill": "Bitte füllen Sie das Formular aus und treffen Sie Ihre Auswahl.,
+  "plsfill": "Bitte füllen Sie das Formular aus und treffen Sie Ihre Auswahl.",
   "authfailure": "Benutzername oder Passwort falsch.",
   "2fa": "Es scheint, dass die Zwei-Faktor-Authentifizierung aktiviert ist, geben Sie also bitte den Code aus dem 2FA-Tab ein, um sich anzumelden.",
   "2faempty": "Die Zwei-Faktor-Authentifizierung ist nicht aktiviert oder Sie sind nicht angemeldet. Bitte gehen Sie auf den Passwort-Tab und geben Sie zuvor Ihren Benutzernamen und Ihr Passwort ein.",
