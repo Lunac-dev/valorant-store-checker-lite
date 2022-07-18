@@ -1,0 +1,18 @@
+{
+  "alert": "Une fois connecté, aucune nouvelle connexion n'est autorisée tant que la boutique n'est pas mise à jour.",
+  "password": "Nous ne partageons jamais vos mots de passe.",
+  "plsfill": "Veuillez remplir le formulaire et faite votre sélection.",
+  "authfailure": "Nom d'utlisateur ou mot de passe incorrect",
+  "2fa": "Il semble que l'authentification à deux facteurs soit activée pour ce compte, veuillez donc entrer le code A2F pour vous connecter.",
+  "2faempty": "L'authentification à deux facteurs n'est pas activée ou vous n'êtes pas connecté. Veuillez accéder à l'onglet mot de passe et entrez votre nom d'utilisateur et votre mot de passe avant de le faire.",
+  "ERR_BAD_REQUEST": "Votre session a expiré ou n'est plus disponible. Veuillez vous reconnecter.",
+  "already": "Déjà connecté. Vous pouvez consulter le Magasin Quotidien en vous rendant sur la page Magasin.",
+  "storeyet": "Votre connexion n'est pas terminée. Veuillez terminer la connexion à partir de la page d'accueil pour obtenir Magasin Quotidien.",
+  "about-subtitle": "Ce site est complètement séparé du site VSC actuel. Il est développé en mettant l'accent sur la facilité et les performances de l'utilisateur.",
+  "faq-qsafe": "Q. Est-ce que le site est sécurié ?",
+  "faq-asafe": "R. Je ne peux pas dire oui, mais le code source de ce site est disponible sur GitHub. (l'utilisation de ce site est à vos risques et périls.)",
+  "faq-qmyregion": "Q. Comment je peux vérifier la région de mon compte Riot ?",
+  "faq-amyregion": "R. Connectez-vous à votre compte sur le site officiel de Riot Games, account.riotgames.com. La page d'accueil affichera toutes vos informations personnelles, y compris votre identifiant Riot et votre Tag ; allez dans la deuxième section « Informations personnelles » et vérifier la case « Pays/Région » . Il s'agit de la région enregistrée pour votre compte Riot.",
+  "faq-qmyriotname": "Q. Quel est le nom d'utilisateur de mon compte Riot ?",
+  "faq-amyriotname": "R. Le nom d'utilisateur de votre compte Riot est le nom d'utilisateur que vous utilisez pour vous connecter, comme « Piarre », et non le nom d'affichage comme « Piarre#Dev »."
+}
