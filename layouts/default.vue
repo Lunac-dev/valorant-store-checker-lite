@@ -60,6 +60,9 @@
           <v-list-item v-if="$i18n.locale !== 'de'" @click="() => changeLocale('de')">
             <v-list-item-title>Deutsch</v-list-item-title>
           </v-list-item>
+          <v-list-item v-if="$i18n.locale !== 'fr'" @click="() => changeLocale('fr')">
+            <v-list-item-title>French</v-list-item-title>
+          </v-list-item>
         </v-list>
       </v-menu>
     </v-app-bar>

@@ -135,6 +135,41 @@
         </v-card>
       </div>
     </div>
+    <div class="pt-10">
+      <div class="v-responsive d-flex align-center mx-auto justify-center" style="height: 100%; max-width: 100vh; width: 100%;">
+        <v-card
+          elevation="2"
+          class="pa-5"
+          width="100vh"
+        >
+          <h1 class="text-center">
+            VSC Updates
+          </h1>
+          <v-timeline
+            align-top
+            dense
+          >
+            <v-timeline-item
+              v-for="n in news"
+              v-bind:key="n.date"
+              color="valorant"
+            >
+              <v-row class="pt-1">
+                <v-col cols="12" sm="3">
+                  {{ n.date }}
+                </v-col>
+                <v-col>
+                  <strong>{{ n.title }}</strong>
+                  <div class="text-caption">
+                    {{ n.text }}
+                  </div>
+                </v-col>
+              </v-row>
+            </v-timeline-item>
+          </v-timeline>
+        </v-card>
+      </div>
+    </div>
   </v-container>
 </template>
 
@@ -171,6 +206,7 @@ export default {
       twofa: this.$cookies.get('2fa'),
       data: this.$cookies.get('data'),
       code: null,
+      news: [],
       required: value => !!value || 'Please be sure to fill out the form or select.'
     }
   },
@@ -187,6 +223,10 @@ export default {
       const type = this.show ? 'text' : 'password'
       return { icon, type }
     }
+  },
+
+  mounted () {
+    this.getnews()
   },
 
   methods: {
@@ -348,6 +388,15 @@ export default {
           title: 'Oops...',
           text: this.$t('plsfill')
         })
+      }
+    },
+
+    async getnews () {
+      const news = await this.$axios.get('https://api.lunac.xyz/vsc/news?type=2&limit=2')
+
+      for (const k in news.data) {
+        const event = new Date(news.data[k].date)
+        this.news.push({ title: news.data[k].title, text: news.data[k].text, date: event.toUTCString() })
       }
     }
   }

@@ -54,7 +54,29 @@
           width="100vh"
           height="100%"
         >
-          <h1>Coming Soon...</h1>
+          <h1>VSC Updates</h1>
+          <v-timeline
+            align-top
+            dense
+          >
+            <v-timeline-item
+              v-for="n in news"
+              v-bind:key="n.date"
+              color="valorant"
+            >
+              <v-row class="pt-1">
+                <v-col cols="12" sm="3">
+                  {{ n.date }}
+                </v-col>
+                <v-col>
+                  <strong>{{ n.title }}</strong>
+                  <div class="text-caption">
+                    {{ n.text }}
+                  </div>
+                </v-col>
+              </v-row>
+            </v-timeline-item>
+          </v-timeline>
         </v-card>
       </v-col>
     </v-row>
@@ -156,7 +178,8 @@ export default {
       bonusoffers: [],
       data: this.$cookies.get('data'),
       vp: 0,
-      rp: 0
+      rp: 0,
+      news: []
     }
   },
 
@@ -178,6 +201,7 @@ export default {
       const tmp = JSON.parse(this.data)
       this.setStores(tmp.store)
       this.setWallet(tmp.wallet)
+      this.getnews()
     }
   },
 
@@ -221,6 +245,15 @@ export default {
           html: video,
           width: '80%'
         })
+      }
+    },
+
+    async getnews () {
+      const news = await this.$axios.get('https://api.lunac.xyz/vsc/news?type=2&limit=2')
+
+      for (const k in news.data) {
+        const event = new Date(news.data[k].date)
+        this.news.push({ title: news.data[k].title, text: news.data[k].text, date: event.toUTCString() })
       }
     }
   }
