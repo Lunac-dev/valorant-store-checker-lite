@@ -154,7 +154,7 @@
                   {{ weapon.name }}
                 </v-card-title>
                 <v-card-subtitle class="text-h6 text-decoration-underline">
-                  {{ weapon.vp }} VP
+                  {{ weapon.vpold }} VP -> {{ weapon.vp }} VP
                 </v-card-subtitle>
               </v-img>
             </v-img>
