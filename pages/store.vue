@@ -207,21 +207,25 @@ export default {
 
   methods: {
     setStores (stores) {
+      let nightmarket = false
       for (const k in stores) {
         if ('offerleft' in stores[k]) {
+          continue
+        } else if ('BonusStore' in stores[k]) {
+          nightmarket = true
           continue
         }
         this.storeoffers.push(
           { vp: stores[k].vp, name: stores[k].name, imgsrc: stores[k].imgsrc, videosrc: stores[k].videosrc, tierid: stores[k].tierid }
         )
       }
-      if ('BonusStore' in stores) {
-        for (const k in stores.BonusStore) {
-          if ('BonusLeft' in stores.BonusStore[k]) {
+      if (nightmarket) {
+        for (const k in stores[5].BonusStore) {
+          if ('BonusLeft' in stores[5].BonusStore[k]) {
             continue
           }
           this.bonusoffers.push(
-            { vp: stores.BonusStore[k].vp, vpold: stores.BonusStore[k].vpold, name: stores.BonusStore[k].name, imgsrc: stores.BonusStore[k].imgsrc, videosrc: stores.BonusStore[k].videosrc, tierid: stores[k].tierid }
+            { vp: stores[5].BonusStore[k].vp, vpold: stores[5].BonusStore[k].vpold, name: stores[5].BonusStore[k].name, imgsrc: stores[5].BonusStore[k].imgsrc, videosrc: stores[5].BonusStore[k].videosrc, tierid: stores[5].BonusStore[k].tierid }
           )
         }
       }
