@@ -1,6 +1,6 @@
 {
   "alert": "Une fois connecté, aucune nouvelle connexion n'est autorisée tant que la boutique n'est pas mise à jour.",
-  "password": "Nous ne partageons jamais vos mots de passe.",
+  "password": "Nous ne partagerons jamais vos mots de passe.",
   "plsfill": "Veuillez remplir le formulaire et faite votre sélection.",
   "authfailure": "Nom d'utlisateur ou mot de passe incorrect",
   "2fa": "Il semble que l'authentification à deux facteurs soit activée pour ce compte, veuillez donc entrer le code A2F pour vous connecter.",
